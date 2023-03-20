@@ -4,7 +4,7 @@ const ShortUrl = require('./models/shortUrl');
 const connection = require('./config/connection');
 const app = express();
 
-if ($_server['REQUEST_URI']=='/favicon.ico') exit('');
+
 //
 app.set('view engine', 'ejs')
 
