@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended: false}))
 //Rotas:
 //Rota padrão
 app.get("/", function(req, res){
-    res.send("Está é a rota padrão, link do repositório deste projeto: https://github.com/SamuelCandido/url_shortener");
+    res.send("Está é a rota padrão, para acessar a home page bote /home no final do link ou clique aqui: https://long-plum-termite-belt.cyclic.app/home .Link do repositório deste projeto: https://github.com/SamuelCandido/url_shortener");
 })
 
 //Rota home page
