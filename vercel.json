@@ -1,3 +1,15 @@
 {
-    "reweites": [{ "source": "/(.*)", "destination": "/"}]
+      "version": 2,
+      "builds":[
+        {
+            "src": "server.js",
+            "dest": "@vercel/node"
+        }
+      ],
+      "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+      ]  
 }
