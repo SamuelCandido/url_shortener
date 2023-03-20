@@ -12,17 +12,21 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended: false}))
 
 //Rotas:
+//Rota padrão
+app.get("/", function(req, res){
+    res.send("Está é a rota padrão, link do repositório deste projeto: https://github.com/SamuelCandido/url_shortener");
+})
 
 //Rota home page
-app.get("/", async function (req, res) {
+app.get("/home", async function (req, res) {
         const shortUrls = await ShortUrl.find()
         res.render('index', { shortUrls: shortUrls });
-})
+    })
 
 //Sincronizando, esperar concluir em segundo plano para continuar
 app.post('/shortUrls', async function(req, res){
     await ShortUrl.create({ full: req.body.fullUrl})
-    res.redirect('/')
+    res.redirect('/home')
 })
 
 app.get('/:shortUrl', async function(req, res){
