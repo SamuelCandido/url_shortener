@@ -14,4 +14,4 @@ const shortUrlSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('shortUrl', shortUrlSchema)
+module.exports = mongoose.model('ShortUrl', shortUrlSchema)
