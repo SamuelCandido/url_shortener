@@ -38,8 +38,6 @@ app.get('/:shortUrl', async function(req, res){
     res.redirect(shortUrl.full)
 })
 
-router
-
 app.listen(process.env.PORT || 5000, function(){
     console.log("Servidor operante na porta 5000")
 });
